@@ -45,7 +45,7 @@ public class Main {
 						case 5: //회원가입 탈퇴
 							회원가입 탈퇴;
 							break;
-						default:
+						default://12345 외에 다른 거 누르면 보기로 돌아가기
 							break;
 						}
 					}//end of 로그인 안에 있는 while 

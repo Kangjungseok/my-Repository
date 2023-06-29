@@ -6,10 +6,9 @@ public class PlayRSPv2 {
 
 	static Scanner sc = new Scanner(System.in);
 
-	public static void playRSPv2 {
+	public static void playRSPv2() {
 		// TODO Auto-generated method stub
 
-		Name_verification nv = new Name_verification();
 		Comparison compare = new Comparison();
 		String inputEmail;
 		String inputPw;
@@ -17,31 +16,6 @@ public class PlayRSPv2 {
 		String user;// 유저 가위바위보
 		String com;// 컴 가위바위보
 		String userChoice;
-
-		// 회원가입 영역
-		do {
-			System.out.println("이메일을 등록해주세요.");
-			inputEmail = sc.next();
-		} while (!nv.checkEmail(inputEmail));
-
-		nv.setRegisterdId(inputEmail); // 이메일 등록
-
-		System.out.println("비밀번호를 설정해주세요.");
-		inputPw = sc.next();
-		nv.setRegisterdPw(inputPw); // 비밀번호 설정
-
-		// 로그인 영역
-		do {
-			System.out.println("이메일을 입력해주세요.");
-			inputEmail = sc.next();
-		} while (!nv.name_verification(inputEmail));
-
-		do {
-			System.out.println("비밀번호를 입력해주세요.");
-			inputPw = sc.next();
-		} while (!nv.pw_verification(inputPw));
-
-		System.out.println("로그인 되었습니다.");
 
 		// 게임 영역
 
@@ -55,15 +29,9 @@ public class PlayRSPv2 {
 			String comp_filter_value = new String_filter(computer_input).filter();
 			System.out.println(compare.message(user_filter_value, comp_filter_value));
 
-			System.out.println("1. 계속하기 2. 그만두기 3. 전적보기");
+			System.out.println("1. 계속하기 2. 그만두기");
 
 			userChoice = sc.next();
-
-			if (UserChoiceFilter.filter(userChoice).equals("3")) {
-				compare.myScore();
-				System.out.println("1. 다시 게임하기 2. 게임 나가기");
-				userChoice = sc.next();
-			}
 
 		} while (UserChoiceFilter.filter(userChoice).equals("1"));
 
@@ -72,6 +40,8 @@ public class PlayRSPv2 {
 			return;
 		}
 
+		
+		
 	}
 
 }
