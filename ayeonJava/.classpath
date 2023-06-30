@@ -8,5 +8,6 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="lib" path="D:/full_stack_2nd_mg/my_lib/dist/mylibraray.jar"/>
 	<classpathentry kind="lib" path="libs/lombok.jar"/>
+	<classpathentry kind="lib" path="libs/json.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
