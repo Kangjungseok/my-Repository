@@ -64,6 +64,7 @@ public class ChatClient {
 			}
 			
 		});
+		thread.start();
 	}
 	
 	//클라이언트가 입력한 내용을 서버로 전송하는 send() 정의
