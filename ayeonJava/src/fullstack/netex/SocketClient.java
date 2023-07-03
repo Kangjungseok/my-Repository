@@ -27,7 +27,7 @@ public class SocketClient {
 
 	// 생성자를 이용해서 서버에서 할당된 소켓을 초기화 합니다.
 	public SocketClient(ChatServer chatServer ,Socket socket) {
-		
+		this.chatServer = chatServer;
 		this.socket = socket;
 
 		// 할당된 소켓으로부터 스트림 세팅
@@ -59,10 +59,10 @@ public class SocketClient {
 				while (true) {
 					String receiveJson = dis.readUTF();
 					JSONObject jsonObject = new JSONObject(receiveJson);
-					String command = jsonObject.getString("comman");
+					String command = jsonObject.getString("command");
 
 					switch (command) {
-					case "incomming":
+					case "incoming":
 						this.chatName = jsonObject.getString("data");
 						// 아래 메서드는 구현할 예정입니다.
 						chatServer.sendToAll(this, command);

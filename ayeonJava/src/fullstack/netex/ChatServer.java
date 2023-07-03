@@ -102,7 +102,8 @@ public class ChatServer {
 		for (SocketClient sc : socketClients) {
 			if (sc == sender)
 				continue;
-			sc.send(json);
+			//sc.send(json); 원래 이걸로 쓰여있었던 것 같은데?
+			sc.send(root.toString());
 		}
 	}
 	
