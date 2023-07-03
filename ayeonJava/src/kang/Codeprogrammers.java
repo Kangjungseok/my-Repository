@@ -9,37 +9,31 @@ public class Codeprogrammers {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
-		int a = 5;
-		int b = 3;
-		int c = 3;
 		int answer = 0;
+		int[] numlist = {12, 4, 15, 1, 14};
+		int temp =0 ;
 		
-		HashSet<Integer> set = new HashSet<>();
 		
-		set.add(a);
-		set.add(b);
-		set.add(c);
-		System.out.println(set.size());
+			for(int num : numlist) {
+				temp = num;
+				
+				while(temp != 1) {
+				
+				if(temp % 2 ==0) {
+					temp = temp /2 ;
+					answer++;
+				}else {
+					temp = (temp-1) /2;
+					answer++;
+				}
+				}
+			}
 		
-		switch (set.size()) {
-		case 3:
-			answer = a+b+c;
-			break;
-
-		case 2:
-			answer =((int)(Math.pow(a, 2) + Math.pow(b, 2) + Math.pow(c, 2))*(a+ b+ c));
-			
-		default:
-			answer = (int)(3*Math.pow(a, 3) * 3*Math.pow(a, 2) * 3*Math.pow(a, 1));
-			break;
-		}
 		
+		
+		
+		System.out.println(answer);
 	
-		System.out.println((Math.pow(a, 2) + Math.pow(b, 2) + Math.pow(c, 2)));
-		System.out.println((a+ b+ c));
-		System.out.println((int)(Math.pow(a, 2) + Math.pow(b, 2) + Math.pow(c, 2))*(a+ b+ c));
-		System.out.println(answer =((int)(Math.pow(a, 2) + Math.pow(b, 2) + Math.pow(c, 2))*(a+ b+ c)));
 		
 	}
 
