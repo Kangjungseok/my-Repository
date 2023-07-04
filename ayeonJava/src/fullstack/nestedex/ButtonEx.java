@@ -13,7 +13,7 @@ package fullstack.nestedex;
  * 
  *  접근제어는 다른 것과 같이 public private default static 가능합니다.
 */
-public class Button {
+public class ButtonEx {
 	
 	//정적 멤버 interface 정의합니다.
 	public static interface MyClickListner{
