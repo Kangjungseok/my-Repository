@@ -14,6 +14,7 @@ import fullstack.methodEx1.Start;
 
 import javax.swing.JTextField;
 import javax.swing.JPasswordField;
+import javax.swing.JButton;
 
 public class KeyEvtObjectExam extends JFrame implements KeyListener{
 
@@ -61,6 +62,10 @@ public class KeyEvtObjectExam extends JFrame implements KeyListener{
 		pass2.setColumns(6);
 		contentPane.add(pass2);
 		
+		JButton btnNewButton = new JButton("New button");
+		btnNewButton.setBounds(149, 200, 97, 23);
+		contentPane.add(btnNewButton);
+		
 		start();
 	}
 	private void start() {
@@ -99,7 +104,4 @@ public class KeyEvtObjectExam extends JFrame implements KeyListener{
 		
 		
 	}
-	
-	
-	
 }

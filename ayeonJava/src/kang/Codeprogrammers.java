@@ -1,5 +1,6 @@
 package kang;
 
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
@@ -9,31 +10,77 @@ public class Codeprogrammers {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int answer = 0;
-		int[] numlist = {12, 4, 15, 1, 14};
-		int temp =0 ;
 		
+		String[] survey = {"AN", "CF", "MJ", "RT", "NA"};
+		int[] choices = {5, 3, 2, 7, 5};
+		int R=0;
+		int T=0;
 		
-			for(int num : numlist) {
-				temp = num;
-				
-				while(temp != 1) {
-				
-				if(temp % 2 ==0) {
-					temp = temp /2 ;
-					answer++;
-				}else {
-					temp = (temp-1) /2;
-					answer++;
-				}
-				}
+		int C=0;
+		int F=0;
+		
+		int J=0;
+		int M=0;
+		
+		int A=0;
+		int N=0;
+		
+		String answer = "";
+		
+		for(int i = 0 ; i<survey.length;i++) {
+			switch (survey[i].charAt(0)) {
+			case 'R':
+				 R = choices[i]-4;
+				break;
+			case 'T':
+				R = choices[i]-4;
+				break;
+			case 'C':
+				R = choices[i]-4;
+				break;
+			case 'F':
+				R = choices[i]-4;
+				break;
+			case 'J':
+				R = choices[i]-4;
+				break;
+			case 'M':
+				R = choices[i]-4;
+				break;
+			case 'A':
+				R = choices[i]-4;
+				break;
+			case 'N':
+				R = choices[i]-4;
+				break;
+			default:
+				break;
 			}
+		}
 		
-		
-		
+		if(R<T) {
+			answer += "T";
+		}else {
+			answer += "R";
+		}
+		if(C<F) {
+			answer += "F";
+		}else {
+			answer += "C";
+		}
+		if(J<M) {
+			answer += "M";
+		}else {
+			answer += "J";
+		}
+		if(A<N) {
+			answer += "N";
+		}else {
+			answer += "A";
+		}
 		
 		System.out.println(answer);
-	
+		
 		
 	}
 
