@@ -32,6 +32,7 @@ public class DBConnectTest {
 		deldto.setNum(3);
 		dao.deleteMember(deldto);
 		
+		
 
 		// 회원의 모든 정보 보기.
 		ArrayList<GameMemberDTO> members = dao.getAllMember();

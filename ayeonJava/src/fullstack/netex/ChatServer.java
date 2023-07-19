@@ -57,7 +57,6 @@ public class ChatServer {
 				} catch (Exception e) {
 					System.out.println(e.getMessage());
 				}
-
 			}
 		});
 		//thread2.setDaemon(true);
