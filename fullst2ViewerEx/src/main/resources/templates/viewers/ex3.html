@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script th:inline="javascript">
+let firstKey =[[${success}]];
+let name = [[${dto.first}]] + [[${dto.last}]];
+
+alert(name); 
+</script>
+<h2 th:text="${result}"></h2>
+<h2 th:text="${dto.first}"></h2>
+
+</body>
+</html>

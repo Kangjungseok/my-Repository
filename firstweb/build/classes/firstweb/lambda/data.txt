@@ -1,0 +1,4 @@
+{"pno":1,"name:구찌","company:Gucci","price":1000000}
+{"pno":2,"name:에르메스","company:HER","price":3000000}
+{"pno":3,"name:샤넬","company:CH","price":2000000}
+{"pno":4,"name:버버리","company:Bur","price":1500000}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>th 태그의 컬렉션 순환 예제</title>
+<style>
+	.redColor{
+		background-color:red;}
+</style>
+</head>
+<body>
+<!-- th 태그의 주석은 HTML 그대로 사용하면 됩니다. 수행이 안 됩니다.
+컬렉션을 순회하는 대표적 속성으로는 each 속성이 있습니다. ${모델에 연결된 컬렉션 key 명}을 
+기준으로 each="객체 ref(변수명)" 을 통해 객체에 접근 가능합니다.  -->
+
+<ul>
+	<li th:each="corona : ${list}">
+		<!-- th 태그를 html 태그 밖에서 사용할 때는 th 속성을 빼고 리터럴 문자를 사용해서 변수를 표현합니다. -->
+		[[${corona}]]
+	</li>
+</ul>
+
+<!-- th 태그의 조건 : if(조건식) unless(조건식), else 없음
+기본적으로 html 태그 내부에 위치해서 조건 처리합니다 -->
+<!-- each tag 에는 루프의 상태를 나타내는 속성이 state 객체가 있음
+이 객체에는 index 라는 속성이 있어서, 현재 루프 index 를 리턴함  -->
+<ol>
+	<li th:each="dto : ${list}" >
+		<span th:if="${dto.sno % 6 == 0}" th:text="${'6의 배수임..'}"></span>
+		<span th:unless="${dto.sno % 5 == 0}" th:text="${dto.last}"></span>
+	</li>
+	
+</ol>
+<hr>
+<h2>타임리프의 삼항 연산자를 이용할게요</h2>
+<!-- 자바의 그것과 같습니다. ${조건식} ? true 시 리턴값 또는 표현식 false 시 리턴값 or 표현식 -->
+
+<ul>
+	<li th:each="dto : ${list}" 
+		th:class="${dto.sno % 5 == 0} ? 'redColor'" th:text="${dto}">
+	</li>
+</ul>
+
+<hr>
+<h1>인라인으로 표현되는 값은 문서 전체내에서 값으로 표현 가능합니다.</h1>
+
+<h2>th block 요소..th:block 으로 선언하면 이 내부에는 th 로직으로만 구성 가능합니다
+	<br>
+	즉 특정 태그의 content를 표현할 때 th:text 라는 속성을 이용해서 출력했지만
+	이 블락내에서는 표현식 그대로 표현됩니다.
+</h2>
+
+<ul>
+	<th:block th:each="dto:${list}">
+		<li th:text="${dto.sno %2 == 0}?${dto.sno}:${dto.last}"></li>
+	</th:block>
+</ul>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<!-- th:fragment 속성을 이용한 조각 페이지 include 방법
+	1. th:replace or insert = "~{인클루드대상조각페이지 path :: fragment_Name}"
+	끝
+  -->
+<h2>이건 exLayout1 내의 기본 컨텐트입니다.</h2>
+<!-- include 시작 -->
+<!-- 
+<h1>Part1 조각</h1>
+<div th:replace="~{/fragments/fragment1 :: part1}"></div>
+
+<h1>Part2 조각</h1>
+<div th:replace="~{/fragments/fragment1 :: part2}"></div>
+
+<h1>Part3 조각</h1>
+<div th:replace="~{/fragments/fragment1 :: part3}"></div>
+
+<h1>조각페이지 전체 include : 조각페이지 이름만 주면 페이지 전체가 include 됨</h1>
+<div th:replace="~{/fragments/fragment1}"></div>
+ -->
+ 
+ <hr>
+ <hr>
+<th:block th:replace="~{/fragments/fragment1 :: 
+target(~{this :: #ulFirst}, ~{this :: #ulSecond})}">
+
+	<ul id="ulFirst">
+		<li>오늘의 하늘은</li>
+		<li>내게 누군가가 두고 간 선물같아</li>
+		<li>어제보다 더 따뜻해</li>
+	</ul>
+
+	<ul id="ulSecond">
+		<li>길었던 가을의 내겐 첫눈 같은 밤</li>
+		<li>뒤늦은 나만의</li>
+		<li>겨울이 온거야</li>
+	</ul>
+</th:block>
+
+</body>
+</html>

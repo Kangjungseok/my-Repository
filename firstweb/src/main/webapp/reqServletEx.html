@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h2>아래처럼 폼을 구성하세요. name=f1, action=ReqServlet method=post
+	input 요소 : id, pass, name, 취미(체크박스,hobby 키네임) 를 구성하세요. 
+</h2>
+<form action=ReqServlet method=post>
+	ID:<input type="text" size="15" name="id">
+	Pw:<input type=password size="15" name="pw">
+	이름 :<input type=text size="15" name=name>
+	
+	취미 : <input type="checkbox" size="15" name=hobby value="sports">스포츠 
+		  <input type="checkbox" size="15" name=hobby value="programming">프로그래밍
+		  <input type="checkbox" size="15" name=hobby value="movie">영화보기
+		  <input type="checkbox" size="15" name=hobby value="music">음악듣기
+	<input type="submit" value="전송">
+</form>
+<!-- 요청에 응답하는 위 서블릿을 생성 및 doAnything() 까지 구현하세요 -->
+</body>
+</html>

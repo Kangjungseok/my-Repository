@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<!-- 
+쿠키를 생성 및 전송하는 서버에 요청을 보내서 쿠키를 받습니다.
+id 기억하기의 선택 버튼을 생성해서, 쿠키에서 저장한 계정 정보를 재요청 시에 서버가 바로 알 수 잇도록 합니다.
+ -->
+ 
+ <center>
+ 	<form method="post" action="CookieServ">
+ 		<table border="1">
+ 			<tr>
+ 				<td align="right" width="30%">
+ 					ID
+ 				</td>
+ 				<td align="center">
+ 					<input type="text" name="id" size="10">
+ 				</td>
+ 				<td align="center" rowspan="2">
+ 					<input type="submit" value="로그인">
+ 				</td>
+ 			</tr>
+ 			
+ 			<tr>
+ 				<td align="right">
+ 					비번 :
+ 				</td>
+ 				<td align="center">
+ 					<input type="password" name="pw" size="10">
+ 				</td>
+ 			</tr>
+ 			<tr>
+ 				<td align="left" colspan="3">
+ 					<input type="checkbox" name="id_rem" value="chk"/> Remember Me
+ 				</td>
+ 			</tr>
+ 		</table>
+ 	</form>
+ </center>
+</body>
+</html>

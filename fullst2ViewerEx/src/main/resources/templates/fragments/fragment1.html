@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<div th:fragment="part1">
+		<h2>Part1 조각 페이지의 내용</h2>
+	</div>
+	<div th:fragment="part2">
+		<h2>Part2 조각 페이지의 내용</h2>
+	</div>
+	<div th:fragment="part3">
+		<h2>Part3 조각 페이지의 내용</h2>
+	</div>
+	
+	<!-- target 속성 : include 하는 페이지에서 target 을 이용해서 파라미터를 주면
+	해당 순서대로 매핑된 조각을 리턴하는 방식입니다 -->
+	<div th:fragment="target(first,second)">
+		<style>
+			.c1{
+				background-color : aqua;
+			}
+			.c2{
+				background-color : blueviolet;
+			}
+		</style>
+		
+		<div class="c1">
+			<th:block th:replace="${first}"></th:block>
+		</div>
+		<div class="c2">
+			<th:block th:replace="${second}"></th:block>
+		</div>
+		
+	</div>
+</body>
+</html>

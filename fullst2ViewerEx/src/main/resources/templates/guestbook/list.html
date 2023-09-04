@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<th:block th:replace="~{/layout/basic :: setContent(~{this::content} )}">
+	<!-- 11, 13 라인 코드가 자료실 소스엔 빠져있음..추가해줘야함..교재엔 있음.. -->
+		<th: block th:fragment="content">
+			<h1>GuestBook List Page</h1>
+		</th:block>
+	</th:block>
+	
+</body>
+</html>

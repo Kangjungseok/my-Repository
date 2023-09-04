@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<ul>
+		<li th:each="dto:${list}">
+			<a th:href="@{/sample/linkView}">[[${dto}]]</a>
+			<a th:href="@{/sample/linkView(id=3,action='show_all')}">[[${dto}]]</a>
+		</li>
+	</ul>
+</body>
+</html>
