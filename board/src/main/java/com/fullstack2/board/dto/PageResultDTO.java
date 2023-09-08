@@ -64,6 +64,7 @@ public class PageResultDTO<DTO, EN> {
 						.map(fn)
 						.collect(Collectors.toList());
 		
+			
 			this.totalPage = result.getTotalPages();
 			makePageList(result.getPageable());
 		}

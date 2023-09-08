@@ -20,7 +20,7 @@ import lombok.RequiredArgsConstructor;
 @Service
 @RequiredArgsConstructor
 public class BoardServiceImpl implements BoardService {
-
+	
 	
 	private final BoardRepository boardRepository;
 	private final ReplyRepository replyRepository;
@@ -78,25 +78,6 @@ public class BoardServiceImpl implements BoardService {
 	
 	
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

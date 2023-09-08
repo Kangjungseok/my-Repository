@@ -1,6 +1,7 @@
 package com.fullstack2.board;
 
 import java.util.List;
+import java.util.stream.IntStream;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,8 +9,10 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import com.fullstack2.board.dto.BoardDTO;
 import com.fullstack2.board.entity.Board;
+import com.fullstack2.board.entity.Member;
 import com.fullstack2.board.entity.Reply;
 import com.fullstack2.board.repository.BoardRepository;
+import com.fullstack2.board.repository.MemberRepository;
 import com.fullstack2.board.repository.ReplyRepository;
 import com.fullstack2.board.service.BoardService;
 
@@ -18,15 +21,31 @@ class BoardApplicationTests {
 
 	
 	
-	
-	//private MemberRepository memberRepository;
+	@Autowired
+	private MemberRepository memberRepository;
+	@Autowired
 	private BoardRepository boardRepository;
 	@Autowired
 	private ReplyRepository replyRepository;
 	@Autowired
 	private BoardService boardService;
 	
-	@Test//댓글목록들 get test
+	@Test
+	public void autoDateTest() {
+		IntStream.rangeClosed(101, 120)
+		 .forEach(i -> {
+			 Member member = Member.builder()
+					 				.email("user" + i + "@fst2.com")
+					 				.password("1111")
+					 				.name("회원" + i)
+					 				.build();
+			 memberRepository.save(member);
+		 });
+	}
+	
+	
+	
+	//@Test//댓글목록들 get test
 	public void getReplies() {
 		List<Reply> result = replyRepository.
 				getRepliesByBoardOrderByRno(Board.builder().bno(85L).build());
@@ -164,6 +183,23 @@ class BoardApplicationTests {
 					 			.build();
 			 replyRepository.save(reply);
 		 });
+		*/
+		/*
+		IntStream.rangeClosed(1, 100)
+			.forEach(i -> {
+				Member member = Member.builder()
+		 				.email("user" + i + "@fst2.com")
+		 				.password("1111")
+		 				.name("회원" + i)
+		 				.build();
+				Board board = Board.builder()
+									.content("글내용"+i+"번쨰2")
+									.title("글제목"+i+"번쨰2")
+									.writer(member)
+									.build();
+				boardRepository.save(board);
+			
+			});
 		*/
 		
 		/* 여기는 Member 샘플데이터 Insert Code

@@ -8,16 +8,14 @@ import jakarta.persistence.Id;
 import jakarta.persistence.ManyToOne;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
+import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 @Entity
 @Builder
-@AllArgsConstructor
-@NoArgsConstructor
-@Getter
-@ToString(exclude = "board")
+@Data
 public class Reply extends BaseEntity {
 
 	@Id
@@ -30,10 +28,7 @@ public class Reply extends BaseEntity {
 	@ManyToOne(fetch = FetchType.LAZY)
 	private Board board;
 	
-	
-	public void changeText(String text) {
-		this.text = text;
-	}
+
 	
 	
 	

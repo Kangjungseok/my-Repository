@@ -95,27 +95,7 @@ public class BoardController {
 		
 	}
 	
-	
+
 	
 	
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

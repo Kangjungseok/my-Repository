@@ -7,6 +7,8 @@ import org.springframework.data.domain.Sort;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 /*
  * 이 DTO 는 화면에서 사용자가 요청하는 페이지번호를 분석해서
@@ -24,9 +26,12 @@ import lombok.Data;
  * 페이지의 시작은 0부터 시작하니, 요청 페이지에서 항상 -1 을 해줘야 정상적인 페이지 Number가 됩니다.
  * 
  */
-@Builder
-@AllArgsConstructor
-@Data
+//@Builder
+//@AllArgsConstructor
+//@Data
+
+@Setter //meme : getter와 setter 어노테이션을 추가했을 때, 쿼리스트링으로 전해지는 
+@Getter
 public class PageRequestDTO {
 
 	private int page;
@@ -51,20 +56,5 @@ public class PageRequestDTO {
 	
 	
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
