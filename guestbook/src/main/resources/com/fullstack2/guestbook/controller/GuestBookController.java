@@ -37,6 +37,7 @@ public class GuestBookController {
 	public void list(PageRequestDTO pageRequestDTO, Model model) {
 		//viewer 에게 요청된 페이지의 목록을 담은 리스트를 파라미터로 넘깁니다
 		model.addAttribute("result", guestBookService.getList(pageRequestDTO));
+		
 	}
 	
 	

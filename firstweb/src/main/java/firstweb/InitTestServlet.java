@@ -51,24 +51,9 @@ public class InitTestServlet extends HttpServlet {
 		System.out.println(start + " ~ " + end + " 멤버필드 hap : " + this.hap); //hap의 결과는? 멤버필드 hap이 나올까요 지역변수 hap이 나올까요?
 		
 		
-		
-		
-		
-		
-		
-		
 	}
 
 }
-
-
-
-
-
-
-
-
-
 
 
 

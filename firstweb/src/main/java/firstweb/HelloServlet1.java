@@ -39,7 +39,7 @@ public class HelloServlet1 extends HttpServlet{
 		PrintWriter out = response.getWriter();
 		
 		out.println("<h2>Hello Servlet</h2>");
-		out.println("안녕하세요 "+ id + " 님! 암호는 " +pass+ " 이메일 : " +email + "이군요<br>");		
+		out.println("안녕하세요 "+ id + " 님! 암호는 " +pass+ " 이메일 : " +email + "이군요<br>");
 		out.println("<h2>현재 시간은 : " + java.time.LocalDateTime.now() + " 입니다.</h2>");
 		
 		

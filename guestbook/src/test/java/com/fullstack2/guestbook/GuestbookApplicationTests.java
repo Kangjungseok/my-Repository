@@ -30,6 +30,8 @@ class GuestbookApplicationTests {
 											.content("이건 내용 "+ i)
 											.writer("회원 " + i)
 											.build();
+			
+			 
 			System.out.println(guestBookRepository.save(guestBook));
 		});
 		
